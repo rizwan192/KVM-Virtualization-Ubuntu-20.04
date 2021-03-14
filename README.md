@@ -87,7 +87,6 @@ vim /etc/network/interfaces
  There might be one or two lines. We remove everything and add the following lines
 
  ```bash
-
  auto br0
  iface enp0s3 inet manual
 iface br0 inet dhcp
@@ -101,3 +100,29 @@ iface br0 inet dhcp
 ```bash
  virt-install --name virhVM --memory 2048 --vcpus 2 --disk size=10 --cdrom /home/rizwan/Downloads/ubuntu-18.04.4-live-server-amd64.iso –os-variant ubuntu18.04
  ```
+
+After installing vm we need to access it from our host machine. So, we need to install ```openssh-server``` on the guest. with the following command.
+
+```bash
+apt install openssh-server
+```
+
+Now we will find out the ip address of our guest machine by typing
+
+```bash
+ifconfig
+```
+we can see the ip address of our machine here. It's ```192.168.122.31```
+
+![img5](/images/5.png)
+
+From our ```host``` machine we can accees it by the following command
+
+```bash
+ssh username@ip_address
+```
+in our case this is 
+
+```bash
+ssh rizwan@192.168.122.31
+```
