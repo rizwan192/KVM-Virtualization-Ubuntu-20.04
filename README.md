@@ -12,7 +12,6 @@ suod su -
 
 ```bash
 egrep -c '(vmx|svm)' /proc/cpuinfo
-
 ```
 
  Here we can see our machine supports kvm as the output is 12
@@ -23,7 +22,6 @@ egrep -c '(vmx|svm)' /proc/cpuinfo
 
 ```bash
 apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virtinst virt-manager qemu-system
-
 ```
 
 * ```qemu-kvm``` - software that provides hardware emulation for the KVM hypervisor.
