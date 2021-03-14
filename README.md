@@ -1,7 +1,7 @@
 
 # **KVM-Virtualization-Ubuntu-20.04**
 
-## This process demonstrates Installing VMs on Ubuntu 20.04 using KVM. All the commands are run with ```sudo``` privileges and to run commands as ```sudo``` we need to use the following command
+### This process demonstrates Installing VMs on Ubuntu 20.04 using KVM. All the commands are run with ```sudo``` privileges and to run commands as ```sudo``` we need to use the following command
 
 ```bash
 sudo su -
@@ -14,7 +14,6 @@ egrep -c '(vmx|svm)' /proc/cpuinfo
 ```
 
 ### Here we can see our machine supports KVM as the output is 12
-
 
 ![img1](images/1.png)
 
@@ -121,4 +120,4 @@ From our ```host``` machine we can access it by the following command
 ssh username@ip_address
 ```
 
-inIn our case, that is  ```ssh rizwan@192.168.122.31```
+In our case, that is  ```ssh rizwan@192.168.122.31```
